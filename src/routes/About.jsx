@@ -8,8 +8,8 @@ const About = () => {
         <Col>
           <h1 className="display-4 text-primary">Hello, I'm Johnson!</h1>
           <p className="lead text-muted">
-            Passionate software developer with experience in web development. I
-            solve problems and create impactful solutions.
+            Aspiring developer with a strong foundation in coding and a passion
+            for learning and growth.
           </p>
         </Col>
       </Row>
@@ -37,21 +37,6 @@ const About = () => {
             iterative development and continuous improvement to deliver
             high-quality solutions.
           </p>
-        </Col>
-      </Row>
-
-      <Row className="text-center">
-        <Col>
-          <Button
-            variant="primary"
-            href="https://www.linkedin.com/in/johnson-omwoyo-809a20312?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxzRsjEXmSVCx3aP2NKOOiw%3D%3D"
-            className="me-2"
-          >
-            Connect on LinkedIn
-          </Button>
-          <Button variant="secondary" href="https://github.com/johnson-Omwoyo">
-            View GitHub Profile
-          </Button>
         </Col>
       </Row>
     </Container>

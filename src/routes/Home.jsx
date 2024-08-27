@@ -7,7 +7,8 @@ function Home() {
         <div className="hero-content">
           <h1 className="display-4">Welcome to My Portfolio</h1>
           <p className="lead">
-            Hi, I’m Johnson Omwoyo. I created this to improve my skill.
+            Hi, I'm Johnson Omwoyo. I created this portfolio to showcase my
+            growing skills and dedication to improving as a developer.
           </p>
           <a href="#featured-work" className="btn btn-primary btn-lg">
             See My Work

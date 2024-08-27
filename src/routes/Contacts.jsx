@@ -1,109 +1,75 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import "./Contacts.css";
+import "./Contacts.css"; // For any additional custom styling if needed
 
 const Contacts = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:5000/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const result = await response.json();
-      if (result.success) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("Failed to send message.");
-      }
-    } catch (error) {
-      setStatus("An error occurred.");
-    }
-  };
-
   return (
     <div className="contact-page">
+      {/* Contact Section */}
       <section className="contact-section text-center py-5">
-        <Container>
+        <div className="container">
           <h1 className="display-4">Contact Me</h1>
           <p className="lead">
             I’d love to hear from you. Please fill out the form below or reach
             out via other contact methods.
           </p>
 
-          <Form
-            className="contact-form mx-auto"
-            style={{ maxWidth: "600px" }}
-            onSubmit={handleSubmit}
-          >
-            <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
+          {/* Contact Form */}
+          <form className="contact-form mx-auto" style={{ maxWidth: "600px" }}>
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">
+                Name
+              </label>
+              <input
                 type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
+                className="form-control"
+                id="name"
                 placeholder="Your Name"
                 required
               />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
+            </div>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">
+                Email address
+              </label>
+              <input
                 type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
+                className="form-control"
+                id="email"
                 placeholder="Your Email"
                 required
               />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Message</Form.Label>
-              <Form.Control
-                as="textarea"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
+            </div>
+            <div className="mb-3">
+              <label htmlFor="message" className="form-label">
+                Message
+              </label>
+              <textarea
+                className="form-control"
+                id="message"
+                rows="4"
                 placeholder="Your Message"
                 required
-              />
-            </Form.Group>
-            <Button type="submit" variant="primary">
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary">
               Send Message
-            </Button>
-          </Form>
+            </button>
+          </form>
 
-          {status && <p className="mt-3">{status}</p>}
-
+          {/* Additional Contact Information */}
           <div className="contact-info mt-5">
             <h3 className="display-5">Other Ways to Reach Me</h3>
             <ul className="list-unstyled">
               <li>
                 <i className="fas fa-envelope"></i> Email:{" "}
-                <a href="mailto:johnsonomwoyo100@gmail.com">
+                <a href="mailto:your-email@example.com">
                   johnsonomwoyo100@gmail.com
                 </a>
               </li>
               <li>
-                <i className="fas fa-phone"></i> Phone: +254708258617
+                <i className="fas fa-phone"></i> Phone: +254 708258617
               </li>
               <li>
-                <i className="fa-brands fa-linkedin"></i> LinkedIn:{" "}
+                <i class="fa-brands fa-linkedin"></i> LinkedIn:{" "}
                 <a
                   href="https://www.linkedin.com/in/johnson-omwoyo-809a20312?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxzRsjEXmSVCx3aP2NKOOiw%3D%3D"
                   target="_blank"
@@ -113,7 +79,7 @@ const Contacts = () => {
                 </a>
               </li>
               <li>
-                <i className="fa-brands fa-square-github"></i> GitHub:{" "}
+                <i class="fa-brands fa-square-github"></i>GitHub:{" "}
                 <a
                   href="https://github.com/yourprofile"
                   target="_blank"
@@ -124,7 +90,7 @@ const Contacts = () => {
               </li>
             </ul>
           </div>
-        </Container>
+        </div>
       </section>
     </div>
   );

@@ -7,7 +7,7 @@ const Contacts = () => {
       <section className="contact-section text-center py-5">
         <div className="container">
           <h1 className="display-4">Contact Me</h1>
-          <p className="lead">
+          <p className="pleaase-lead">
             I’d love to hear from you. Please fill out the form below or reach
             out via other contact methods.
           </p>

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -22,9 +23,9 @@ function Home() {
           <p className="lead2">
             I am a passionate developer specializing in web development.
           </p>
-          <a href="/about" className="btn btn-outline-primary">
+          <NavLink to="/about" className="btn btn-outline-primary">
             Learn More
-          </a>
+          </NavLink>
         </div>
       </section>
 
@@ -46,7 +47,7 @@ function Home() {
                   <h5 className="card-title">Ticket Booking</h5>
                   <p className="card-text">
                     A project built with react js applying many of the features
-                    of a ticket booking site
+                    on a ticket booking site
                   </p>
                   <a href="https://flight-booking-com.vercel.app/">view</a>
                 </div>
@@ -79,9 +80,9 @@ function Home() {
                 <div className="card-body">
                   <h5 className="card-title">Portfolio</h5>
                   <p className="card-text">
-                    The currently viewed portfolio built with react js bootstrap
-                    5 making good utilization of there irrespective features
-                    like routing and responsive
+                    The currently viewed portfolio built with react js and
+                    bootstrap(IV) making good utilization of there respective
+                    features like routing and screen responsiveness
                   </p>
                 </div>
               </div>

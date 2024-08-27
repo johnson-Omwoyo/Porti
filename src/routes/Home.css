@@ -1,0 +1,68 @@
+/* Hero Section */
+.hero-section {
+  background: url("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 15px;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    height: auto;
+    padding: 60px 15px;
+  }
+
+  .hero-content {
+    padding: 10px;
+  }
+}
+
+.btn-lg {
+  border-radius: 20px;
+}
+
+/* About Section and Featured Work Section */
+.about-section,
+.featured-work-section {
+  padding: 60px 15px;
+}
+
+.featured-work-section .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+.lead{
+  color:#fff
+}
